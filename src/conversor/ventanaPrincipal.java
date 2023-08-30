@@ -6,11 +6,11 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
 public class ventanaPrincipal extends JFrame implements ActionListener {
-    
+
     JButton boton1 = new JButton("Ok");
     JButton boton2 = new JButton("Cancelar");
     JComboBox combo1 = new JComboBox();
-    
+
     public ventanaPrincipal() {
         JPanel p = new JPanel();
         JPanel q = new JPanel();
@@ -25,17 +25,30 @@ public class ventanaPrincipal extends JFrame implements ActionListener {
         p.add(combo1);
         q.add(boton1);
         q.add(boton2);
-        
-        add("North",new JLabel(" "));
-        add("Center",p);
-        add("South",q);
+
+        add("North", new JLabel(" "));
+        add("Center", p);
+        add("South", q);
         boton1.addActionListener(this);
+        boton2.addActionListener(this);
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == boton1) {
+        if (e.getSource() == boton2) {
             System.exit(0);
+        } else if (e.getSource() == boton1) {
+            String seleccion = combo1.getSelectedItem().toString();
+            if ("Conversor de Moneda".equals(seleccion)) {
+                monedas nuevaMoneda = new monedas();
+                nuevaMoneda.setBounds(0, 0, 500, 600);
+                nuevaMoneda.setVisible(true);
+                nuevaMoneda.setLocationRelativeTo(null);
+                nuevaMoneda.setResizable(false);
+                nuevaMoneda.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            } else if ("Conversor de unidades de Longitud".equals(seleccion)) {
+                System.out.println("Se selecciono conversor de unidades de Longitud");
+            }
         }
     }
 
@@ -47,5 +60,5 @@ public class ventanaPrincipal extends JFrame implements ActionListener {
         nuevaVentana.setResizable(false);
         nuevaVentana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-    
+
 }
