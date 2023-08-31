@@ -47,7 +47,12 @@ public class ventanaPrincipal extends JFrame implements ActionListener {
                 nuevaMoneda.setResizable(false);
                 nuevaMoneda.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             }else if ("Conversor de unidades de Longitud".equals(seleccion)){
-                System.out.println("Se selecciono conversor de unidades de Longitud");
+                longitud nuevalongitud = new longitud();
+                nuevalongitud.setBounds(0, 0, 450, 300);
+                nuevalongitud.setVisible(true);
+                nuevalongitud.setLocationRelativeTo(null);
+                nuevalongitud.setResizable(false);
+                nuevalongitud.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             }
         }
     }

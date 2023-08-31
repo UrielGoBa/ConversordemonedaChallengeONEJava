@@ -1,21 +1,18 @@
 package conversor;
 
-import java.awt.*;
 import java.awt.event.*;
 import java.text.DecimalFormat;
 import javax.swing.*;
-//import javax.swing.border.EmptyBorder;
 
 public class monedas extends JFrame implements ActionListener {
 
-    JLabel label1 = new JLabel("Ingresa la cantidad de dinero que deseas convertir");
-    JLabel label2 = new JLabel("Elige el tipo de cambio");
+    JLabel label1 = new JLabel("Ingresa la cantidad de unidades de Longitud que deseas convertir");
+    JLabel label2 = new JLabel("Elige el tipo de conversión de Unidades de Medida");
     JLabel label3 = new JLabel("");
     JTextField entrada1 = new JTextField();
     JComboBox comboMoneda = new JComboBox();
     JButton ok = new JButton("Ok");
     JButton cancelar = new JButton("Cancelar");
-//    JPanel h = new JPanel();
 
     public monedas() {
         setTitle("Monedas");
