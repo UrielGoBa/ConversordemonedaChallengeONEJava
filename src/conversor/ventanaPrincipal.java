@@ -41,12 +41,12 @@ public class ventanaPrincipal extends JFrame implements ActionListener {
             String seleccion = combo1.getSelectedItem().toString();
             if ("Conversor de Moneda".equals(seleccion)) {
                 monedas nuevaMoneda = new monedas();
-                nuevaMoneda.setBounds(0, 0, 500, 600);
+                nuevaMoneda.setBounds(0, 0, 450, 300);
                 nuevaMoneda.setVisible(true);
                 nuevaMoneda.setLocationRelativeTo(null);
                 nuevaMoneda.setResizable(false);
-                nuevaMoneda.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            } else if ("Conversor de unidades de Longitud".equals(seleccion)) {
+                nuevaMoneda.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            }else if ("Conversor de unidades de Longitud".equals(seleccion)){
                 System.out.println("Se selecciono conversor de unidades de Longitud");
             }
         }
